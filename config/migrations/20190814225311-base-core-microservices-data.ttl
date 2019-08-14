@@ -1,0 +1,124 @@
+@prefix mu: <http://mu.semte.ch/vocabularies/core/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix ext: <http://mu.semte.ch/vocabularies/ext/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://info.mu.semte.ch/microservices/19d0c1ef-e0f5-4cc0-8364-1697b99951ce>
+  a mu:Microservice;
+  mu:uuid "19d0c1ef-e0f5-4cc0-8364-1697b99951ce";
+  dct:title "mu-authorization-service";
+  dct:description "Provides resources to include authorization in a mu.semte.ch project";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/963ae4d0-742e-4a5b-8180-692829558f6c>
+  a mu:Microservice;
+  mu:uuid "963ae4d0-742e-4a5b-8180-692829558f6c";
+  dct:title "mu-export-service";
+  dct:description "Microservice to export data using custom defined SPARQL queries";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/106524b1-5417-4324-b896-b0d64d5cf9ce>
+  a mu:Microservice;
+  mu:uuid "106524b1-5417-4324-b896-b0d64d5cf9ce";
+  dct:title "mu-registration-service";
+  dct:description "Registration microservice using a triple store in the backend";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/7d0a65ec-300f-4ca9-9cac-e88936f82347>
+  a mu:Microservice;
+  mu:uuid "7d0a65ec-300f-4ca9-9cac-e88936f82347";
+  dct:title "mu-login-service";
+  dct:description "Login microservice using a triple store in the backend";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/885efd3e-eec9-4c91-93c6-31334b4f22bd>
+  a mu:Microservice;
+  mu:uuid "885efd3e-eec9-4c91-93c6-31334b4f22bd";
+  dct:title "mu-oauth-github-login-service";
+  dct:description "Login service for authenticating with GitHub through OAuth";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/3b79b036-0748-432b-af39-8f9547f1e084>
+  a mu:Microservice;
+  mu:uuid "3b79b036-0748-432b-af39-8f9547f1e084";
+  dct:title "mu-migrations-service";
+  dct:description "Service for running database migrations";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/ab6abd16-b6d3-4545-866b-36a5a0bfbc17>
+  a mu:Microservice;
+  mu:uuid "ab6abd16-b6d3-4545-866b-36a5a0bfbc17";
+  dct:title "mu-search-elastic-backend";
+  dct:description "Elasticsearch backend to be used with mu-search";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/a7ec8049-3b0f-4509-a302-dd47206c6085>
+  a mu:Microservice;
+  mu:uuid "a7ec8049-3b0f-4509-a302-dd47206c6085";
+  dct:title "mu-search";
+  dct:description "Search facility for mu-semtech, powered by ElasticSearch";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/7e84454f-d253-43e9-a17f-55b011169845>
+  a mu:Microservice;
+  mu:uuid "7e84454f-d253-43e9-a17f-55b011169845";
+  dct:title "mu-file-service";
+  dct:description "File microservice to store files and their file-specific metadata";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/352def44-aa92-4570-aee5-be298c5208f5>
+  a mu:Microservice;
+  mu:uuid "352def44-aa92-4570-aee5-be298c5208f5";
+  dct:title "mu-delta-notifier";
+  dct:description "Sends notifications about changes to interested mu.semte.ch microservices";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/f101445c-388c-49d2-8367-b61592d68d55>
+  a mu:Microservice;
+  mu:uuid "f101445c-388c-49d2-8367-b61592d68d55";
+  dct:title "mu-authorization";
+  dct:description "SPARQL wrapper for authorization and reactivity";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/a4493479-66a4-4c70-be15-9855ec4474e8>
+  a mu:Microservice;
+  mu:uuid "a4493479-66a4-4c70-be15-9855ec4474e8";
+  dct:title "mu-cl-resources";
+  dct:description "High-level abstractions for generating generic jsonapi compliant resources configured in Common Lisp";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/93f039b6-f1cb-4dd0-b6ef-0ba2f15d2f97>
+  a mu:Microservice;
+  mu:uuid "93f039b6-f1cb-4dd0-b6ef-0ba2f15d2f97";
+  dct:title "mu-identifier";
+  dct:description "Core microservice for user identification";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/3098cd55-7249-4527-a080-44addc61c2be>
+  a mu:Microservice;
+  mu:uuid "3098cd55-7249-4527-a080-44addc61c2be";
+  dct:title "mu-cache";
+  dct:description " API requests";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+
+<http://info.mu.semte.ch/microservices/2847f1d0-8f66-458d-8390-d53611ef4987>
+  a mu:Microservice;
+  mu:uuid "2847f1d0-8f66-458d-8390-d53611ef4987";
+  dct:title "mu-dispatcher";
+  dct:description "Microservice for dispatching requests to the preferred microservice";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/56824454-1920-4843-a6e4-14979c284b9d>
+  a mu:Microservice;
+  mu:uuid "56824454-1920-4843-a6e4-14979c284b9d";
+  dct:title "mu-validation-service";
+  dct:description "ice to execute async data validations using configurable in code validations";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
+
+<http://info.mu.semte.ch/microservices/03ddcb42-57ef-4ef1-859d-94e7ec93fd0b>
+  a mu:Microservice;
+  mu:uuid "03ddcb42-57ef-4ef1-859d-94e7ec93fd0b";
+  dct:title "ember-proxy-service";
+  dct:description "ting an Ember app with a backend API #ember-cli #Ember.js";
+  ext:isCoreMicroservice "true"^^xsd:boolean.
