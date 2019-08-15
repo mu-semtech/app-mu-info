@@ -30,3 +30,7 @@ services:
       - db:database
     volumes:
       - ./config/resources:/config
+  microservicerevisionservice:
+    image: flowofcontrol/microservice-revision-service:0.0.1
+    links:
+      - db:database
