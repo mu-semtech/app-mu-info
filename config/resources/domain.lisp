@@ -8,6 +8,7 @@
                 (:repository :url ,(s-prefix "ext:repository")))
   :has-many `((revision :via ,(s-prefix "ext:hasRevision")
                         :as "revisions"))
+  :features '(no-pagination-defaults)
   :resource-base (s-url "http://info.mu.semte.ch/microservices/")
   :on-path "microservices")
 
@@ -18,5 +19,6 @@
   :has-one `((microservice :via ,(s-prefix "ext:hasRevision")
                            :inverse t
                            :as "microservice"))
+  :features '(no-pagination-defaults)
   :resource-base (s-url "http://info.mu.semte.ch/microservice-revisions/")
   :on-path "microservice-revisions")
