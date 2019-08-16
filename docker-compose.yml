@@ -31,6 +31,6 @@ services:
     volumes:
       - ./config/resources:/config
   microservicerevisionservice:
-    image: flowofcontrol/microservice-revision-service:latest
+    image: semtech/microservice-revision-service:latest
     links:
       - db:database
