@@ -10,6 +10,7 @@
   dct:description "Provides resources to include authorization in a mu.semte.ch project";
   ext:gitRepository "https://github.com/mu-semtech/authorization-service";
   ext:repository "http://info.semte.ch";
+  ext:installationScript "https://raw.githubusercontent.com/mu-semtech/authorization-service/wip/installation-script";
   ext:isCoreMicroservice "true"^^xsd:boolean.
 
 <http://info.mu.semte.ch/microservices/963ae4d0-742e-4a5b-8180-692829558f6c>

@@ -10,7 +10,7 @@
                 (:creation-snippet :string ,(s-prefix "ext:creationSnippet"))
                 (:development-snippet :string ,(s-prefix "ext:developmentSnippet"))
                 (:compose-snippet :string ,(s-prefix "ext:composeSnippet"))
-                (:commands :string ,(s-prefix "ext:commands")))
+                (:installation-script :string ,(s-prefix "ext:installationScript")))
   :has-many `((revision :via ,(s-prefix "ext:hasRevision")
                         :as "revisions")
               (command :via ,(s-prefix "ext:hasCommand")
