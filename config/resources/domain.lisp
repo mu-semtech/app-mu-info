@@ -1,7 +1,7 @@
 (in-package :mu-cl-resources)
 
 (define-resource microservice ()
-  :class (s-prefix "mu:Microservice")
+  :class (s-prefix "ext:Microservice")
   :properties `((:title :string ,(s-prefix "dct:title"))
                 (:description :string ,(s-prefix "dct:description"))
                 (:is-core :boolean ,(s-prefix "ext:isCoreMicroservice"))
@@ -20,7 +20,7 @@
   :on-path "microservices")
 
 (define-resource revision ()
-  :class (s-prefix "mu:MicroserviceRevision")
+  :class (s-prefix "ext:MicroserviceRevision")
   :properties `((:image :string ,(s-prefix "ext:microserviceRevision"))
                 (:version :string ,(s-prefix "ext:microserviceVersion")))
   :has-one `((microservice :via ,(s-prefix "ext:hasRevision")
@@ -31,7 +31,7 @@
   :on-path "microservice-revisions")
 
 (define-resource command ()
-  :class (s-prefix "mu:MicroserviceCommand")
+  :class (s-prefix "ext:MicroserviceCommand")
   :properties `((:title :string ,(s-prefix "ext:commandTitle"))
                 (:shell-command :string ,(s-prefix "ext:shellCommand"))
                 (:description :string ,(s-prefix "dct:description")))
