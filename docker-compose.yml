@@ -31,6 +31,6 @@ services:
     volumes:
       - ./config/resources:/config
   microservicerevisionservice:
-    image: semtech/microservice-revision-service:0.0.5
+    image: semtech/microservice-revision-service:0.0.6
     links:
       - db:database
