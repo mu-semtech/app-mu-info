@@ -9,7 +9,7 @@
                 (:image-url :url ,(s-prefix "ext:imageUrl"))
                 (:homepage-url :url ,(s-prefix "ext:homepageUrl"))
                 )
-  :has-many `((revision :via ,(s-prefix "ext:hasRevision")
+  :has-many `((revision :via ,(s-prefix "ext:hasRepo")
                         :as "revisions")
               (command :via ,(s-prefix "ext:hasCommand")
                        :as "commands"))
@@ -25,7 +25,7 @@
                 (:repo-url :string ,(s-prefix "ext:revisionRepoUrl"))
                 (:readme :string ,(s-prefix "ext:readme"))
                 )
-  :has-one `((repo :via ,(s-prefix "ext:hasRevision")
+  :has-one `((repo :via ,(s-prefix "ext:hasRepo")
                            :inverse t
                            :as "repo"))
   :features '(no-pagination-defaults)

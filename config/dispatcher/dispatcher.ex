@@ -26,12 +26,8 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/repos/"
   end
 
-  post "/repos/*path" do
-    Proxy.forward conn, path, "http://resource/repos/"
-  end
-
-  get "/microservice-revisions/*path" do
-    Proxy.forward conn, path, "http://resource/microservice-revisions/"
+  get "/repo-revisions/*path" do
+    Proxy.forward conn, path, "http://resource/repo-revisions/"
   end
 
   post "/update-revisions/*path" do
