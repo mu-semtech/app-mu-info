@@ -18,7 +18,7 @@ services:
     volumes:
       - ./config/migrations:/data/migrations
   db:
-    image: tenforce/virtuoso:1.3.2-virtuoso7.2.2
+    image: redpencil/virtuoso:feature-woodpecker-feature-builds
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
@@ -32,5 +32,9 @@ services:
       - ./config/resources:/config
   microservicerevisionservice:
     image: semtech/microservice-revision-service:0.0.6
+    links:
+      - db:database
+  harvester:
+    image: repo-harvester
     links:
       - db:database
