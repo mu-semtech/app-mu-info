@@ -11,9 +11,6 @@ services:
   harvester:
     ports:
       - "5000:80"
-    volumes:
-      - ../repo-harvester/:/app
-      - ../cache/:/usr/src/app/cache/
     environment:
       MODE: "development"
       LOG_LEVEL: "debug"
