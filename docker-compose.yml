@@ -24,6 +24,7 @@ services:
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
     volumes:
       - ./data/db:/data
+      - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
   resource:
     image: semtech/mu-cl-resources:1.17.1
     links:

@@ -10,11 +10,8 @@
                 (:homepage-url :url ,(s-prefix "ext:homepageUrl"))
                 )
   :has-many `((revision :via ,(s-prefix "ext:hasRepo")
-                        :as "revisions")
-              (command :via ,(s-prefix "ext:hasCommand")
-                       :as "commands"))
-  :features '(no-pagination-defaults)
-  :resource-base (s-url "http://info.mu.semte.ch/repos/")
+                        :as "revisions"))
+  :resource-base (s-url "http://mu.semte.ch/vocabularies/ext/repos/")
   :on-path "repos")
 
 (define-resource revision ()
@@ -28,18 +25,5 @@
   :has-one `((repo :via ,(s-prefix "ext:hasRepo")
                            :inverse t
                            :as "repo"))
-  :features '(no-pagination-defaults)
-  :resource-base (s-url "http://info.mu.semte.ch/microservice-revisions/")
+  :resource-base (s-url "http://mu.semte.ch/vocabularies/ext/repo-revisions/")
   :on-path "repo-revisions")
-
-(define-resource command ()
-  :class (s-prefix "ext:MicroserviceCommand")
-  :properties `((:title :string ,(s-prefix "ext:commandTitle"))
-                (:shell-command :string ,(s-prefix "ext:shellCommand"))
-                (:description :string ,(s-prefix "dct:description")))
-  :has-one `((microservice :via ,(s-prefix "ext:hasCommand")
-                           :inverse t
-                           :as "microservice"))
-  :features '(no-pagination-defaults)
-  :resource-base (s-url "http://info.mu.semte.ch/microservice-commands/")
-  :on-path "microservice-commands")
