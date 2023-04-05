@@ -10,6 +10,7 @@
                 (:homepage-url :url ,(s-prefix "ext:homepageUrl"))
                 )
   :has-many `((revision :via ,(s-prefix "ext:hasRepo")
+                        :inverse t
                         :as "revisions"))
   :resource-base (s-url "http://mu.semte.ch/vocabularies/ext/repos/")
   :on-path "repos")
@@ -23,7 +24,6 @@
                 (:readme :string ,(s-prefix "ext:readme"))
                 )
   :has-one `((repo :via ,(s-prefix "ext:hasRepo")
-                           :inverse t
                            :as "repo"))
   :resource-base (s-url "http://mu.semte.ch/vocabularies/ext/repo-revisions/")
   :on-path "repo-revisions")
