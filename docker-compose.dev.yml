@@ -4,13 +4,8 @@ services:
   identifier:
     ports:
       - "80:80"
-  db:
-    ports:
-      - "8890:8890"
   
   harvester:
-    ports:
-      - "5000:80"
     environment:
       MODE: "development"
       LOG_LEVEL: "debug"

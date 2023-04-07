@@ -30,8 +30,16 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/repo-revisions/"
   end
 
-  post "/update-revisions/*path" do
-    Proxy.forward conn, path, "http://microservicerevisionservice/update-revisions/"
+  get "/repo-harvester/*path" do
+    Proxy.forward conn, path, "http://harvester/"
+  end
+
+  match "/conductor/*path" do
+    Proxy.forward conn, path, "http://db:8890/conductor/"
+  end
+
+  match "/sparql/*path" do
+    Proxy.forward conn, path, "http://db:8890/sparql/"
   end
 
   match _ do

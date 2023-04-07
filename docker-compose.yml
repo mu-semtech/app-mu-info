@@ -36,6 +36,6 @@ services:
     links:
       - db:database
   harvester:
-    image: repo-harvester
+    image: semtech/repo-harvester
     links:
       - db:database
