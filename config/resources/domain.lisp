@@ -1,5 +1,7 @@
 (in-package :mu-cl-resources)
 
+(defparameter *default-page-size* 100)
+
 (define-resource repo ()
   :class (s-prefix "ext:Repo")
   :properties `((:title :string ,(s-prefix "dct:title"))
