@@ -23,7 +23,12 @@
                 (:image-url :string ,(s-prefix "ext:revisionImageUrl"))
                 (:repo-tag :string ,(s-prefix "ext:revisionRepoTag"))
                 (:repo-url :string ,(s-prefix "ext:revisionRepoUrl"))
+                
                 (:readme :string ,(s-prefix "ext:readme"))
+                (:tutorials :string ,(s-prefix "ext:tutorials"))
+                (:how-to-guides :string ,(s-prefix "ext:howToGuides"))
+                (:explanation :string ,(s-prefix "ext:explanation"))
+                (:reference :string ,(s-prefix "ext:reference"))
                 )
   :has-one `((repo :via ,(s-prefix "ext:hasRepo")
                            :as "repo"))

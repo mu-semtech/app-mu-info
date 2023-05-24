@@ -30,7 +30,7 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/repo-revisions/"
   end
 
-  get "/repo-harvester/*path" do
+  match "/repo-harvester/*path" do
     Proxy.forward conn, path, "http://harvester/"
   end
 

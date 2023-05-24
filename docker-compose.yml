@@ -11,14 +11,9 @@ services:
       - resource:resource
     volumes:
       - ./config/dispatcher:/config
-  migrations:
-    image: semtech/mu-migrations-service:0.5.0
-    links:
-      - db:database
-    volumes:
-      - ./config/migrations:/data/migrations
+
   db:
-    image: redpencil/virtuoso:feature-woodpecker-feature-builds
+    image: redpencil/virtuoso
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
@@ -31,10 +26,7 @@ services:
       - db:database
     volumes:
       - ./config/resources:/config
-  microservicerevisionservice:
-    image: semtech/microservice-revision-service:0.0.6
-    links:
-      - db:database
+
   harvester:
     image: semtech/repo-harvester
     links:
