@@ -31,3 +31,5 @@ services:
     image: semtech/repo-harvester
     links:
       - db:database
+    volumes:
+      - ./config/harvester/:/app/config/
