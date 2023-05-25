@@ -35,6 +35,9 @@ docker-compose exec harvester curl localhost:80/update
 ```
 *Note: this can be called externally if the right ports are opened for the harvester and/or identifier service*
 
+### Harvester configuration (adding more repo/image sources, categories, overrides...)
+All the harvester config files are kept in [config/harvester](config/harvester/), and are loaded in through [docker-compose.yml](docker-compose.yml). For more info on configuring the .conf files, please see the [repo-harvester docs](https://github.com/mu-semtech/repo-harvester#configuration-through-configconf)
+
 ### Development mode with repo-harvester
 ```yml
 # app-mu-info/docker-compose.override.yml
