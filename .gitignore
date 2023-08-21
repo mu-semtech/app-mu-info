@@ -9,3 +9,5 @@
 /data/db/virtuoso.pxa
 /data/db/virtuoso.trx
 /data/db/.*_pwd_set
+
+docker-compose.override.yml
