@@ -7,6 +7,7 @@
   :properties `((:title :string ,(s-prefix "dct:title"))
                 (:description :string ,(s-prefix "dct:description"))
                 (:category :url ,(s-prefix "ext:category"))
+                (:default-branch :url ,(s-prefix "ext:defaultBranch"))
                 (:repo-url :url ,(s-prefix "ext:repositoryUrl"))
                 (:image-url :url ,(s-prefix "ext:imageUrl"))
                 (:homepage-url :url ,(s-prefix "ext:homepageUrl"))
