@@ -23,6 +23,21 @@ cd app-mu-info/
 docker-compose up --detach
 ```
 
+### Enable EmberJS Frontend
+```yml
+# docker-compose.override.yml
+services:
+  frontend:
+    # This can be replaced with a repository or image of your choosing
+    build: https://github.com/Denperidge-Redpencil/semantic.works.git
+```
+
+```bash
+mv config/dispatcher/dispatcher.ex config/dispatcher/dispatcher.ex.bak
+cp config/dispatcher/dispatcher-with-emberjs.ex config/dispatcher/dispatcher.ex
+```
+
+
 ### Initialize data
 ```bash
 docker-compose exec harvester curl localhost:80/init
