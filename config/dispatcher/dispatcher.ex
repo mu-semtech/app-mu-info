@@ -30,10 +30,6 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/repo-revisions/"
   end
 
-  match "/harvester/*path", _ do
-    forward conn, path, "http://harvester:80/"
-  end
-
   match "/*_", %{ last_call: true, accept: %{ json: true } } do
     send_resp( conn, 404, "{ \"error\": { \"code\": 404, \"message\": \"Route not found.  See config/dispatcher.ex\" } }" )
   end
