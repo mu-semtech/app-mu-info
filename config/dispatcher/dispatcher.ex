@@ -34,15 +34,6 @@ defmodule Dispatcher do
     forward conn, path, "http://harvester:80/"
   end
 
-  match "/conductor/*path", _ do
-    forward conn, path, "http://db:8890/conductor/"
-  end
-
-  match "/sparql/*path", _ do
-    forward conn, path, "http://db:8890/sparql/"
-  end
-
-
   match "/*_", %{ last_call: true, accept: %{ json: true } } do
     send_resp( conn, 404, "{ \"error\": { \"code\": 404, \"message\": \"Route not found.  See config/dispatcher.ex\" } }" )
   end
