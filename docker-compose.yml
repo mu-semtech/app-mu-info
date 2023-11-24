@@ -28,7 +28,7 @@ services:
       - ./config/resources:/config
 
   harvester:
-    image: semtech/repo-harvester
+    image: semtech/repo-harvester:0.1.0
     links:
       - db:database
     volumes:
