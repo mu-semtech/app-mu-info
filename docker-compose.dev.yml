@@ -9,3 +9,5 @@ services:
     environment:
       MODE: "development"
       LOG_LEVEL: "debug"
+    ports:
+      - 8888:80
