@@ -5,13 +5,16 @@ services:
     image: semtech/mu-identifier:1.10.1
     links:
       - dispatcher:dispatcher
+    labels:
+      - logging=true
   dispatcher:
     image: semtech/mu-dispatcher:2.0.0
     links:
       - resource:resource
     volumes:
       - ./config/dispatcher:/config
-
+    labels:
+      - logging=true
   db:
     image: redpencil/virtuoso:1.2.0-rc.1
     environment:
@@ -20,16 +23,21 @@ services:
     volumes:
       - ./data/db:/data
       - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
+    labels:
+      - logging=true
   resource:
     image: semtech/mu-cl-resources:1.22.2
     links:
       - db:database
     volumes:
       - ./config/resources:/config
-
+    labels:
+      - logging=true
   harvester:
     image: semtech/repo-harvester:0.1.0
     links:
       - db:database
     volumes:
       - ./config/harvester/:/app/config/
+    labels:
+      - logging=true
